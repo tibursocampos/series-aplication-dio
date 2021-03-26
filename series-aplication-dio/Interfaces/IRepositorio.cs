@@ -2,12 +2,13 @@
 
 namespace series_aplication_dio
 {
-    interface IRepositorio<T>
+    public interface IRepositorio<T>
     {
-        List<T> List();
-        T ReturnById(int id);
         void Insert(T entity);
-        void Delete(int id);
+        List<T> GetAll();
+        T GetById(int id);
         void Update(int id, T entity);
+        void Delete(int id);
+        int NextId();
     }
 }
